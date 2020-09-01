@@ -1,0 +1,104 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.25.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Hasbi Windows, HP Inc., LIC=KRMHL-0UMX0-KBBER-K76TN-WQZ68-8S0F6
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.25.2.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.25.2.0
+Dialog DLL:      DCM.DLL V1.17.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
+Dialog DLL:      TCM.DLL V1.35.1.0
+ 
+<h2>Project:</h2>
+C:\Users\hp\Documents\Keil\Project\000-BISMILLAH_KRTI19_HEXACOPTER_GY25_MODE-PID RPY\project.uvprojx
+Project File Date:  12/25/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'STM32F4-Discovery'
+compiling main.c...
+User\Global_Variable.h(7): warning:  #1295-D: Deprecated declaration resetIMU - give arg types
+  	extern void resetIMU();
+User\Global_Variable.h(8): warning:  #1295-D: Deprecated declaration interruptInit - give arg types
+  	extern void interruptInit();
+User\Global_Variable.h(10): warning:  #1295-D: Deprecated declaration KalibrasiIMU - give arg types
+  	extern void KalibrasiIMU();
+User\Global_Variable.h(17): warning:  #1295-D: Deprecated declaration InitPWMIN - give arg types
+  	extern void InitPWMIN();
+User\Global_Variable.h(18): warning:  #1295-D: Deprecated declaration InitPWMOUT - give arg types
+  	extern void InitPWMOUT();
+User\Global_Variable.h(19): warning:  #1295-D: Deprecated declaration GetPWM - give arg types
+  	extern void GetPWM();
+User\Global_Variable.h(20): warning:  #1295-D: Deprecated declaration InitBmp - give arg types
+  	extern void InitBmp();
+User\Global_Variable.h(21): warning:  #1295-D: Deprecated declaration GetBMP - give arg types
+  	extern void GetBMP();
+User\Global_Variable.h(22): warning:  #1295-D: Deprecated declaration KalibrasiBMP - give arg types
+  	extern void KalibrasiBMP();
+User\Global_Variable.h(30): warning:  #1295-D: Deprecated declaration BateraiMonitor - give arg types
+  	extern void BateraiMonitor(); 
+User\Global_Variable.h(31): warning:  #1295-D: Deprecated declaration Airspeed - give arg types
+  	extern void Airspeed();
+User\Global_Variable.h(34): warning:  #1-D: last line of file ends without a newline
+  #endif
+User\main.c(233): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			dataYaw_Zero   = dataYaw_Zero   / 100.0;
+User\main.c(234): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			dataPitch_Zero = dataPitch_Zero / 100.0;
+User\main.c(235): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			dataRoll_Zero  = dataRoll_Zero  / 100.0;
+User\main.c(410): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		data_altitude_zero = data_altitude_zero /100.0;
+User\main.c(610): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float final=(float)((firstdig+(nextdig/60.0))*-1.0);
+User\main.c(615): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float final=(float)((firstdig+(nextdig/60.0))*1.0);
+User\main.c(620): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float final=(float)((firstdig+(nextdig/60.0))*1.0);
+User\main.c(625): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		float final=(float)((firstdig+(nextdig/60.0))*-1.0);
+User\main.c(629): warning:  #940-D: missing return statement at end of non-void function "dms_dd" 
+  	}
+User\main.c(644): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	baterai.value = ((float)rawADC/4096.0) *16.5;
+User\main.c(648): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	voltage  = (float) rawADC / 4095.0 * 3.0; // Voltage at Arduino pin. Range is 5V, 10 bits.
+User\main.c(651): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	if (pressure <0.0) pressure = 0;
+User\main.c(652): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	windspeed.value =  sqrt (2.0 * pressure / 1.2 ) * 1.943844;
+User\main.c(710): warning:  #1-D: last line of file ends without a newline
+  }
+User\main.c: 26 warnings, 0 errors
+linking...
+Program Size: Code=35902 RO-data=850 RW-data=728 ZI-data=3608  
+FromELF: creating hex file...
+".\Targets\STM32F4_Discovery\project.axf" - 0 Error(s), 26 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.1.0.8.pack
+                Keil.STM32F4xx_DFP.1.0.8
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_STM32F4-Discovery
+  C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
